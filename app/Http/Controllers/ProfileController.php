@@ -35,6 +35,6 @@ class ProfileController extends Controller
     protected function profileResponse(User $user): array
     {
         return ['profile' => $user->only('username', 'bio', 'image')
-            + ['following' => $this->user->doesUserFollowAnotherUser(auth()->id(), $user->id)]];
+            + ['following' => $this->user->doesUserFollowAnotherUser(auth()->id() ?? 0, $user->id)]];
     }
 }
