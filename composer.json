@@ -5,9 +5,9 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.2",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^10.0",
+        "laravel/framework": "^11.0",
         "laravel/tinker": "^2.5",
         "tymon/jwt-auth": "^2.2"
     },
@@ -16,8 +16,8 @@
     "fakerphp/faker": "^1.21",
     "laravel/sail": "^1.26",
     "mockery/mockery": "^1.6",
-    "nunomaduro/collision": "^7.0",
-    "phpunit/phpunit": "^10.0"
+    "nunomaduro/collision": "^8.1",
+    "phpunit/phpunit": "^11.0 || ^12.0"
 
     },
     "autoload": {
