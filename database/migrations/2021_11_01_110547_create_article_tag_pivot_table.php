@@ -20,6 +20,6 @@ class CreateArticleTagPivotTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('article_tag_pivot');
+        Schema::dropIfExists('article_tag');
     }
 }
