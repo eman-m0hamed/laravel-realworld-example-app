@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleRevisionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CommentController;
@@ -45,4 +46,12 @@ Route::middleware('auth')->group(function () {
         Route::post('{article}/comments', [CommentController::class, 'store']);
         Route::delete('{article}/comments/{comment}', [CommentController::class, 'destroy']);
     });
+
+    // Articles Revisions Endpoints
+    Route::prefix('articles')->group(function () {
+       Route::get('{article}/revisions', [ArticleRevisionController::class, 'index']);
+        Route::get('{article}/revisions/{revision}', [ArticleRevisionController::class, 'show']);
+        Route::put('{article}/revisions/{revision}/revert', [ArticleRevisionController::class, 'revert']);
+    });
+
 });
