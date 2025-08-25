@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\Article::factory(10)->create();
         // \App\Models\Tag::factory(10)->create();
         // \App\Models\Comment::factory(10)->create();
+        // \App\Models\ArticleRevision::factory(10)->create();
     }
 }
