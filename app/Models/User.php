@@ -12,9 +12,9 @@ class User extends Authenticatable implements JWTSubject
 {
     use HasFactory;
 
-    protected $fillable = ['username', 'email', 'password', 'bio', 'images'];
+    protected $fillable = ['username', 'email', 'password', 'bio', 'image'];
 
-    protected $visible = ['username', 'email', 'bio', 'images'];
+    protected $visible = ['username', 'email', 'bio', 'image'];
 
     public function getRouteKeyName(): string
     {
