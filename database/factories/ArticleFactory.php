@@ -10,7 +10,7 @@ class ArticleFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::inRandomOrder()->first()->id,
+            'user_id' => User::inRandomOrder()->first()->id ?? User::factory(),
             'title' => $this->faker->sentence,
             'slug' => $this->faker->slug,
             'description' => $this->faker->text,
